@@ -1,6 +1,7 @@
 **First Web application using Python and Flask**
 
 **Installation**
+`pip install -r requirements.txt`
 
 **Configuration**
 You need to put in you env variable :
@@ -9,19 +10,19 @@ You need to put in you env variable :
 - EMAIL_USER
 - EMAIL_PASS
 
-See the file config.py
+See the file `config.py`
 
 **API**
-To consume the api, use http://127.0.0.1:5000/api/v1
+To consume the api, use `http://127.0.0.1:5000/api/v1`
 
 **Available endpoints**
 - /users
-    - GET : /users
-    - GET : /users/<int:id>
-    - POST :/users
+    - `GET : /users`
+    - `GET : /users/<int:id>`
+    - `POST :/users`
 - /posts
-    -  GET : /posts
-    - GET : /posts/<int:id>
+    -  `GET : /posts`
+    - `GET : /posts/<int:id>`
 
 **Todos**
 - Build basic web app

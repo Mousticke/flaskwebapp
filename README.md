@@ -2,7 +2,7 @@
 
 ### Installation :
 ```python 
-    pip install -r requirements.txt
+    pip install -r INSTALL.txt
 ```
 
 ### Configuration

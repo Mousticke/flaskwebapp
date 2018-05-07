@@ -1,4 +1,4 @@
-**First Web application using Python and Flask**
+# First Web application using Python and Flask
 
 ### Installation :
 ```python 

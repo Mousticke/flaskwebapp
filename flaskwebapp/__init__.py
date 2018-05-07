@@ -31,9 +31,15 @@ def create_app(config_class=Config):
     from flaskwebapp.main.routes import main
     from flaskwebapp.errors.handlers import errors
 
+    from flaskwebapp.users.api.routes import usersAPI
+    from flaskwebapp.posts.api.routes import postsAPI
+
     app.register_blueprint(users)
     app.register_blueprint(posts)
     app.register_blueprint(main)
     app.register_blueprint(errors)
+    
+    app.register_blueprint(usersAPI)
+    app.register_blueprint(postsAPI)
 
     return app

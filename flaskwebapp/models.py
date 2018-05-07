@@ -29,6 +29,15 @@ class User(db.Model, UserMixin):
             return None
         return User.query.get(user_id)
 
+    @property
+    def serialize(self):
+        """Return object data in easily serializable format"""
+        return {'id': self.id, 'username': self.username, 'email': self.email, 'posts': self.serializeOneToMany}
+    
+    @property
+    def serializeOneToMany(self):
+        return [item.serialize for item in self.posts]
+
     def __repr__(self):
         return f"User('{self.username}', '{self.email}', '{self.image_file}')"
 
@@ -38,6 +47,18 @@ class Post(db.Model):
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
     content = db.Column(db.Text, nullable=False)
     user_id =  db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+
+    @property
+    def serialize(self):
+        """Return object data in easily serializable format"""
+        return {'id': self.id, 'title': self.title, 'content': self.content, 'user_id': self.user_id, 'date_posted': self.dump_datetime(self.date_posted)}
+    
+    @staticmethod
+    def dump_datetime(value):
+        """Deserialize datetime object into string form for JSON processing."""
+        if value is None:
+            return None
+        return [value.strftime("%Y-%m-%d"), value.strftime("%H:%M:%S")]
 
     def __repr__(self):
         return f"User('{self.title}', '{self.date_posted}')"

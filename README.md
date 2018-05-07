@@ -1,9 +1,11 @@
 **First Web application using Python and Flask**
 
-**Installation**
-`pip install -r requirements.txt`
+### Installation :
+```python 
+    pip install -r requirements.txt
+```
 
-**Configuration**
+### Configuration
 You need to put in you env variable :
 - SECRET_KEY
 - SQLALCHEMY_DATABASE_URI
@@ -12,10 +14,10 @@ You need to put in you env variable :
 
 See the file `config.py`
 
-**API**
+### API
 To consume the api, use `http://127.0.0.1:5000/api/v1`
 
-**Available endpoints**
+### Available endpoints
 - /users
     - `GET : /users`
     - `GET : /users/<int:id>`
@@ -24,7 +26,7 @@ To consume the api, use `http://127.0.0.1:5000/api/v1`
     -  `GET : /posts`
     - `GET : /posts/<int:id>`
 
-**Todos**
+### Todos
 - Build basic web app
 - Pass into RESTful API
 - See the git repository in Post

@@ -5,6 +5,11 @@
     pip install -r INSTALL.txt
 ```
 
+### Run :
+```phyton 
+    python run.py
+```
+
 ### Configuration
 You need to put in you env variable :
 - SECRET_KEY

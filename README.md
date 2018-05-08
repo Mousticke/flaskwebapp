@@ -43,5 +43,4 @@ To consume the api, use `http://127.0.0.1:5000/api/v1`
 - [x] Build basic web app
 - [] Pass into RESTful API (with searching, sorting, filtering and pagination)
 - [] See the git repository in Post
-- [] Use a config file with mongoose database
-- [] Use a config file with multipe use cas (mail server, database...)
+- [x] Use a config file with multipe use cas (mail server, database...)

@@ -1,4 +1,5 @@
 # First Web application using Python and Flask
+> Pour toutes questions : contacter : akim.benchiha@gmail.com
 
 ### Installation :
 ```python 
@@ -25,15 +26,22 @@ To consume the api, use `http://127.0.0.1:5000/api/v1`
 ### Available endpoints
 - /users
     - `GET : /users`
+        - Sorting : `?sorts=rank_asc` default `?sorts=rank_desc`
+        - Pagination : `?page=1` default `no pagination`
+        - Filtering : `?username=username` or `?email=email` or `?username=username&email=email`
     - `GET : /users/<int:id>`
-    - `POST :/users`
+    - `POST : /users`
+    - `GET : /users/<int:id>/posts`
+    - `GET : /users/<int:id>/posts/<int:post_id>`
+        - Sorting : `?sorts=rank_asc` default `?sorts=rank_desc`
+        - Pagination : `?page=1` default `no pagination`
 - /posts
     -  `GET : /posts`
     - `GET : /posts/<int:id>`
 
 ### Todos
-- Build basic web app
-- Pass into RESTful API
-- See the git repository in Post
-- Use a config file with mongoose database
-- Use a config file with multipe use cas (mail server, databse...)
+- [x] Build basic web app
+- [] Pass into RESTful API (with searching, sorting, filtering and pagination)
+- [] See the git repository in Post
+- [] Use a config file with mongoose database
+- [] Use a config file with multipe use cas (mail server, database...)

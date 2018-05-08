@@ -41,6 +41,6 @@ To consume the api, use `http://127.0.0.1:5000/api/v1`
 
 ### Todos
 - [x] Build basic web app
-- [] Pass into RESTful API (with searching, sorting, filtering and pagination)
-- [] See the git repository in Post
+- [ ] Pass into RESTful API (with searching, sorting, filtering and pagination)
+- [ ] See the git repository in Post
 - [x] Use a config file with multipe use cas (mail server, database...)
